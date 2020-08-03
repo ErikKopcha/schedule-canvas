@@ -1,20 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas chart</title>
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Starting template</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
+    <section class="chart">
+      <h1 class="chart__title">Популярность языков программирования</h1>
 
-<body>
+      <form class="chart__data" action="#" method="POST">
+        <div class="chart__input-group">
+          <label class="chart__label" for="javascript">JavaScript</label>
+          <input class="chart__input input-field" type="number" name="javascript" id="javascript" min="0" max="100" required="">
+          <span>%</span>
+        </div>
 
-  <h1 class="visually-hidden">Starting template</h1> <!-- Для ридера -->
+        <div class="chart__input-group">
+          <label class="chart__label" for="php">PHP</label>
+          <input class="chart__input input-field" type="number" name="php" id="php" min="0" max="100" required="">
+          <span>%</span>
+        </div>
 
-  <script src="js/main.js"></script>
+        <div class="chart__input-group">
+          <label class="chart__label" for="python">Python</label>
+          <input class="chart__input input-field" type="number" name="python" id="python" min="0" max="100" required="">
+          <span>%</span>
+        </div>
 
-</body>
+        <input class="chart__submit-button input-field" type="submit" value="Показать график">
+      </form>
 
+      <div class="chart__canvas-wrapper">
+        <canvas id="canvas" width="500" height="250">Браузер не поддерживает Canvas</canvas>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
